@@ -1,0 +1,204 @@
+{
+  "tasks": [
+    {
+      "id": "1",
+      "title": "Develop SPA Architecture",
+      "description": "Designing the component structure and integrating Ant Design for the core layout.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-15",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "2",
+      "title": "Form Setup and Validation",
+      "description": "Implement complex forms using Antd Form components and custom validation rules.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-03-10",
+      "tags": ["Frontend"],
+      "createdAt": "2026-01-22"
+    },
+    {
+      "id": "3",
+      "title": "SQL Query Optimization",
+      "description": "Perform an audit of slow PostgreSQL database queries and add necessary indexes.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-01-25",
+      "tags": ["Backend"],
+      "createdAt": "2026-01-15"
+    },
+    {
+      "id": "4",
+      "title": "Shopping Cart Bug Fix",
+      "description": "The price calculation is incorrect when adding more than 10 items to the cart.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-05",
+      "tags": ["Bug", "Frontend"],
+      "createdAt": "2026-01-28"
+    },
+    {
+      "id": "5",
+      "title": "Home Page Redesign",
+      "description": "Update the color palette and typography according to the new brand book.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-01",
+      "tags": ["Design"],
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": "6",
+      "title": "Unit Test Implementation",
+      "description": "Cover core API controllers with unit tests using Jest/Supertest.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-03-15",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-01-25"
+    },
+    {
+      "id": "7",
+      "title": "Payment Gateway Integration",
+      "description": "Connect Stripe API for card processing and recurring payments.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-28",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "8",
+      "title": "CI/CD Pipeline Configuration",
+      "description": "Automate deployment to staging environment via GitHub Actions.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-01-20",
+      "tags": ["Backend"],
+      "createdAt": "2026-01-05"
+    },
+    {
+      "id": "9",
+      "title": "Analytics Module Requirements",
+      "description": "Conduct a stakeholder meeting and draft the technical specification.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-02-10",
+      "tags": ["Design", "Feature"],
+      "createdAt": "2026-01-29"
+    },
+    {
+      "id": "10",
+      "title": "API Documentation Update",
+      "description": "Add descriptions for new endpoints and schema updates in Swagger/OpenAPI.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-01-30",
+      "tags": ["Backend"],
+      "createdAt": "2026-01-20"
+    },
+    {
+      "id": "11",
+      "title": "Auth System Refactoring",
+      "description": "Migrate from session-based authentication to JWT tokens with refresh cycles.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-20",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-01-25"
+    },
+    {
+      "id": "12",
+      "title": "Mobile Menu Responsive Fix",
+      "description": "Fix element overlap on screens smaller than 360px width.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-03-05",
+      "tags": ["Frontend", "Bug"],
+      "createdAt": "2026-01-31"
+    },
+    {
+      "id": "13",
+      "title": "Migration to Ant Design 5.0",
+      "description": "Update packages and rewrite custom styles to fit the new design system.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-02-12",
+      "tags": ["Frontend"],
+      "createdAt": "2026-01-28"
+    },
+    {
+      "id": "14",
+      "title": "Logo Concept Creation",
+      "description": "Prepare three vector concepts for the new service logo.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-03-20",
+      "tags": ["Design"],
+      "createdAt": "2026-01-31"
+    },
+    {
+      "id": "15",
+      "title": "Security Pentest Audit",
+      "description": "Scan the application for XSS, CSRF, and SQL injection vulnerabilities.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-01-28",
+      "tags": ["Backend"],
+      "createdAt": "2026-01-10"
+    },
+    {
+      "id": "16",
+      "title": "Sentry Error Monitoring",
+      "description": "Integrate real-time frontend error tracking and logging.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-03-12",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-01-30"
+    },
+    {
+      "id": "17",
+      "title": "Dark Mode Implementation",
+      "description": "Implement a theme switcher with persistent storage in localStorage.",
+      "status": "inProgress",
+      "priority": "low",
+      "deadline": "2026-02-25",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-01-27"
+    },
+    {
+      "id": "18",
+      "title": "App Localization (i18n)",
+      "description": "Add support for English and German languages using react-i18next.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-10",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-01-31"
+    },
+    {
+      "id": "19",
+      "title": "Server Log Cleanup",
+      "description": "Clear the /var/log directory of files older than 30 days.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-01-30",
+      "tags": ["Backend"],
+      "createdAt": "2026-01-29"
+    },
+    {
+      "id": "20",
+      "title": "Quarterly Performance Report",
+      "description": "Gather statistics on completed tasks and team KPI metrics.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-02-15",
+      "tags": ["Design"],
+      "createdAt": "2026-01-31"
+    }
+  ]
+}
