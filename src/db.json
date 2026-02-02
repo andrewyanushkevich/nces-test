@@ -200,5 +200,12 @@
       "tags": ["Design"],
       "createdAt": "2026-01-31"
     }
+  ],
+  "tags": [
+    { "id": "1", "name": "Frontend" },
+    { "id": "2", "name": "Backend" },
+    { "id": "3", "name": "Design" },
+    { "id": "4", "name": "Bug" },
+    { "id": "5", "name": "Feature" }
   ]
 }

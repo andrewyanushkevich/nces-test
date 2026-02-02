@@ -1,12 +1,12 @@
-import { taskApi } from "@/entities/task/model/task.api";
+import { baseApi } from "@/shared/api/base.api";
 import { configureStore } from "@reduxjs/toolkit";
 
 export const store = configureStore({
   reducer: {
-    [taskApi.reducerPath]: taskApi.reducer,
+    [baseApi.reducerPath]: baseApi.reducer,
   },
   middleware: (getDefaultMiddleware) =>
-    getDefaultMiddleware().concat(taskApi.middleware),
+    getDefaultMiddleware().concat(baseApi.middleware),
 });
 
 export type RootStore = ReturnType<typeof store.getState>;
