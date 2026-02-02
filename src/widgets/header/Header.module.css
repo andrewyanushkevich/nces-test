@@ -1,0 +1,22 @@
+.root {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.statsBar {
+  display: flex;
+  gap: 32px;
+  padding-left: 32px;
+  border-left: 1px solid #f0f0f0;
+}
+
+.statItem {
+  text-align: center;
+  line-height: 1.1;
+}
