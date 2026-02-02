@@ -1,11 +1,9 @@
-import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import { BASE_URL } from "../../../shared/api/base.api";
+import { baseApi } from "@/shared/api/base.api";
 import type { Task } from "./task.type";
 
-export const taskApi = createApi({
-  baseQuery: fetchBaseQuery({ baseUrl: BASE_URL }),
+export const taskApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    getTasks: builder.query<Task, void>({
+    getTasks: builder.query<Task[], void>({
       query: () => "tasks",
     }),
   }),
