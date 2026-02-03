@@ -14,6 +14,12 @@ export interface Task {
   updatedAt: string;
 }
 
+export interface TaskFilters {
+  priority?: TaskPriority | "all";
+  status?: TaskStatus | "all";
+  tags?: string[];
+}
+
 export const TASK_STATUSE_LABELS: Record<TaskStatus, string> = {
   todo: "Todo",
   inProgress: "In progress",

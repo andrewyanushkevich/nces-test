@@ -1,10 +1,30 @@
 import { baseApi } from "@/shared/api/base.api";
-import type { Task } from "./task.type";
+import type { Task, TaskFilters } from "./task.type";
 
 export const taskApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    getTasks: builder.query<Task[], void>({
-      query: () => "tasks",
+    getTasks: builder.query<Task[], TaskFilters>({
+      query: (filters) => {
+        const params: Record<string, string | string[]> = {};
+
+        if (filters.priority && filters.priority !== "all") {
+          params.priority = filters.priority;
+        }
+        if (filters.status && filters.status !== "all") {
+          params.status = filters.status;
+        }
+        if (filters.tags && filters.tags.length > 0) {
+          params.tags = filters.tags;
+        }
+
+        const search = new URLSearchParams(
+          Object.entries(params).flatMap(([key, value]) =>
+            Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]
+          )
+        ).toString();
+
+        return search ? `tasks?${search}` : "tasks";
+      },
     }),
   }),
 });

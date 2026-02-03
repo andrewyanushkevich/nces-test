@@ -1,0 +1,14 @@
+.card {
+  height: 100%;
+  border-radius: 12px;
+  transition: all 0.3s;
+}
+
+.task-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+}
+
+.task-card--overdue {
+  border-left: 4px solid #ff4d4f;
+}
