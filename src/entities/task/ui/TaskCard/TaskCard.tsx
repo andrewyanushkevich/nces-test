@@ -9,7 +9,8 @@ import dayjs from "dayjs";
 import type { FC } from "react";
 
 import styles from "./TaskCard.module.css";
-import { ClockCircleOutlined, MoreOutlined } from "@ant-design/icons";
+import { ClockCircleOutlined } from "@ant-design/icons";
+import { useNavigate } from "react-router";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -26,14 +27,20 @@ const TAG_COLORS: Record<TaskPriority, string> = {
 const TaskCard: FC<TaskCardProps> = (props) => {
   const { task } = props;
 
+  const navigate = useNavigate();
+
   const isOverdue =
     dayjs(task.deadline).isBefore(dayjs(), "day") && task.status !== "done";
+
+  const onClick = () => {
+    navigate(`task/${task.id}`);
+  };
 
   return (
     <Card
       hoverable
       className={`${styles.card} ${isOverdue ? styles.cardOverdue : ""}`}
-      // onClick={() => setView({ type: 'detail', id: task.id })}
+      onClick={onClick}
     >
       <div
         style={{

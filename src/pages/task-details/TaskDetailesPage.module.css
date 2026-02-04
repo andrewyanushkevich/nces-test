@@ -1,0 +1,116 @@
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px 16px;
+}
+
+.backButton {
+  margin-bottom: 24px;
+}
+
+.card {
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 0;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+.headerRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+@media (max-width: 767px) {
+  .headerRow {
+    flex-direction: column;
+  }
+}
+
+.headerCol {
+  flex: 1;
+}
+
+.statusRow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.tagRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.actions {
+  align-self: flex-start;
+  display: flex;
+  gap: 8px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  border-top: 1px solid #eee;
+  padding-top: 32px;
+}
+
+@media (max-width: 767px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.descText {
+  font-size: 18px;
+  color: #374151;
+  white-space: pre-wrap;
+}
+
+.metaBox {
+  background: #f8fafc;
+  padding: 24px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.metaLabel {
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-size: 11px;
+  text-transform: uppercase;
+  font-weight: 600;
+  display: block;
+}
+
+.deadlineRow {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.deadlineOverdue {
+  color: #ef4444;
+}
+
+/* Priority color reference for usage with Tag component or dynamic styling:
+.lowPriority { color: blue; }
+.mediumPriority { color: orange; }
+.highPriority { color: red; }
+*/
