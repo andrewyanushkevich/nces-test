@@ -11,6 +11,7 @@ import styles from "./TaskFilters.module.css";
 import { useGetTagsQuery } from "@/entities/tag/model/tag.api";
 import { setFilters } from "../model/taskFilterSlice";
 import { useDispatch } from "react-redux";
+import { useDebounceCallback } from "@/shared/hooks/useDebounce";
 
 interface OptionType {
   value: string;
@@ -70,10 +71,16 @@ const TaskFilters = () => {
     }
   }
 
+  const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    dispatch(setFilters({ search: event.target.value }));
+  };
+
+  const deboubncedSearchChange = useDebounceCallback(onSearchChange, 300);
+
   return (
     <Row gutter={[16, 16]}>
       <Col xs={24} md={6}>
-        <Search placeholder="Search task" />
+        <Search placeholder="Search task" onChange={deboubncedSearchChange} />
       </Col>
       <Col xs={24} md={4}>
         <Select

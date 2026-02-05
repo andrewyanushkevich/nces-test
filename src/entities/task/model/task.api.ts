@@ -16,6 +16,9 @@ export const taskApi = baseApi.injectEndpoints({
         if (filters.tags && filters.tags.length > 0) {
           params.tags = filters.tags;
         }
+        if (filters.search) {
+          params.q = filters.search;
+        }
 
         const search = new URLSearchParams(
           Object.entries(params).flatMap(([key, value]) =>
@@ -48,5 +51,9 @@ export const taskApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetTasksQuery, useGetTaskByIdQuery, useDeleteTaskMutation } =
-  taskApi;
+export const {
+  useGetTasksQuery,
+  useGetTaskByIdQuery,
+  useCreateTaskMutation,
+  useDeleteTaskMutation,
+} = taskApi;

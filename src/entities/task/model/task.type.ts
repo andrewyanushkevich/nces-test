@@ -18,6 +18,7 @@ export interface TaskFilters {
   priority?: TaskPriority | "all";
   status?: TaskStatus | "all";
   tags?: string[];
+  search?: string;
 }
 
 export const TASK_STATUSE_LABELS: Record<TaskStatus, string> = {
