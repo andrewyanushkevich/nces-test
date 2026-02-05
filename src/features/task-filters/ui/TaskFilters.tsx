@@ -11,7 +11,7 @@ import styles from "./TaskFilters.module.css";
 import { useGetTagsQuery } from "@/entities/tag/model/tag.api";
 import { setFilters } from "../model/taskFilterSlice";
 import { useDispatch } from "react-redux";
-import { useDebounceCallback } from "@/shared/hooks/useDebounce";
+import { useDebounceCallback } from "@/shared/hooks/useDebounceCallback";
 
 interface OptionType {
   value: string;
