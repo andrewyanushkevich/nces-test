@@ -29,6 +29,16 @@ export const taskApi = baseApi.injectEndpoints({
     getTaskById: builder.query<Task, string>({
       query: (id) => `tasks/${id}`,
     }),
+    createTask: builder.mutation<
+      Task,
+      Omit<Task, "id" | "createdAt" | "updatedAt">
+    >({
+      query: (payload) => ({
+        url: "tasks",
+        method: "POST",
+        body: payload,
+      }),
+    }),
     deleteTask: builder.mutation<void, string>({
       query: (id) => ({
         url: `tasks/${id}`,

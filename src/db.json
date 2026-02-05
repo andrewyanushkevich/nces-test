@@ -1,7 +1,7 @@
 {
   "tasks": [
     {
-      "id": "1",
+      "id": "4d0bfaac-75f7-44f4-912d-4120f0a5de0a",
       "title": "Develop SPA Architecture",
       "description": "Designing the component structure and integrating Ant Design for the core layout.",
       "status": "inProgress",
@@ -11,7 +11,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "2",
+      "id": "0a79c16c-b3c3-46b2-b54f-0de83fd1b8c8",
       "title": "Form Setup and Validation",
       "description": "Implement complex forms using Antd Form components and custom validation rules.",
       "status": "todo",
@@ -21,7 +21,7 @@
       "createdAt": "2026-01-22"
     },
     {
-      "id": "3",
+      "id": "c1dde42d-3c69-46d1-83ba-1e8cf9a2f40a",
       "title": "SQL Query Optimization",
       "description": "Perform an audit of slow PostgreSQL database queries and add necessary indexes.",
       "status": "done",
@@ -31,7 +31,7 @@
       "createdAt": "2026-01-15"
     },
     {
-      "id": "4",
+      "id": "5390ba41-30d2-48e3-b92c-7c89ca05eaf9",
       "title": "Shopping Cart Bug Fix",
       "description": "The price calculation is incorrect when adding more than 10 items to the cart.",
       "status": "inProgress",
@@ -41,7 +41,7 @@
       "createdAt": "2026-01-28"
     },
     {
-      "id": "5",
+      "id": "fc78ac71-b673-4548-ac87-ef4c2c99e297",
       "title": "Home Page Redesign",
       "description": "Update the color palette and typography according to the new brand book.",
       "status": "todo",
@@ -51,7 +51,7 @@
       "createdAt": "2026-01-30"
     },
     {
-      "id": "6",
+      "id": "2efab33c-2ae7-425f-aeb1-f64d0cbe3e47",
       "title": "Unit Test Implementation",
       "description": "Cover core API controllers with unit tests using Jest/Supertest.",
       "status": "todo",
@@ -61,7 +61,7 @@
       "createdAt": "2026-01-25"
     },
     {
-      "id": "7",
+      "id": "e77e8fa2-2707-4454-8287-d4917c0cc789",
       "title": "Payment Gateway Integration",
       "description": "Connect Stripe API for card processing and recurring payments.",
       "status": "inProgress",
@@ -71,7 +71,7 @@
       "createdAt": "2026-01-10"
     },
     {
-      "id": "8",
+      "id": "208cf6aa-9c8b-4938-b169-b78f64f782aa",
       "title": "CI/CD Pipeline Configuration",
       "description": "Automate deployment to staging environment via GitHub Actions.",
       "status": "done",
@@ -81,7 +81,7 @@
       "createdAt": "2026-01-05"
     },
     {
-      "id": "9",
+      "id": "157e2298-f51e-4d66-8432-f6a43ccf72a2",
       "title": "Analytics Module Requirements",
       "description": "Conduct a stakeholder meeting and draft the technical specification.",
       "status": "todo",
@@ -91,7 +91,7 @@
       "createdAt": "2026-01-29"
     },
     {
-      "id": "10",
+      "id": "f513d9d9-bb87-4aca-a468-4359921eeac5",
       "title": "API Documentation Update",
       "description": "Add descriptions for new endpoints and schema updates in Swagger/OpenAPI.",
       "status": "done",
@@ -101,7 +101,7 @@
       "createdAt": "2026-01-20"
     },
     {
-      "id": "11",
+      "id": "d7e3e86a-fee2-46ea-875a-99c1a581dd57",
       "title": "Auth System Refactoring",
       "description": "Migrate from session-based authentication to JWT tokens with refresh cycles.",
       "status": "inProgress",
@@ -111,7 +111,7 @@
       "createdAt": "2026-01-25"
     },
     {
-      "id": "12",
+      "id": "dcf217bb-07db-4bab-8e53-cfd2aeec4271",
       "title": "Mobile Menu Responsive Fix",
       "description": "Fix element overlap on screens smaller than 360px width.",
       "status": "todo",
@@ -121,7 +121,7 @@
       "createdAt": "2026-01-31"
     },
     {
-      "id": "13",
+      "id": "b937f7bd-6e5f-41bb-9afb-bda30e391d70",
       "title": "Migration to Ant Design 5.0",
       "description": "Update packages and rewrite custom styles to fit the new design system.",
       "status": "inProgress",
@@ -131,7 +131,7 @@
       "createdAt": "2026-01-28"
     },
     {
-      "id": "14",
+      "id": "bca63130-84f7-421e-801d-62bb89a83c81",
       "title": "Logo Concept Creation",
       "description": "Prepare three vector concepts for the new service logo.",
       "status": "todo",
@@ -141,7 +141,7 @@
       "createdAt": "2026-01-31"
     },
     {
-      "id": "15",
+      "id": "ad166647-70eb-431e-9813-ffe7f981c352",
       "title": "Security Pentest Audit",
       "description": "Scan the application for XSS, CSRF, and SQL injection vulnerabilities.",
       "status": "done",
@@ -151,7 +151,7 @@
       "createdAt": "2026-01-10"
     },
     {
-      "id": "16",
+      "id": "b02b401b-e168-456a-b160-dc41c6ebd5be",
       "title": "Sentry Error Monitoring",
       "description": "Integrate real-time frontend error tracking and logging.",
       "status": "todo",
@@ -161,7 +161,7 @@
       "createdAt": "2026-01-30"
     },
     {
-      "id": "17",
+      "id": "f59ada2e-b63b-48ec-bd41-7229536f2f3e",
       "title": "Dark Mode Implementation",
       "description": "Implement a theme switcher with persistent storage in localStorage.",
       "status": "inProgress",
@@ -171,7 +171,7 @@
       "createdAt": "2026-01-27"
     },
     {
-      "id": "18",
+      "id": "6cc6d311-1733-402e-8fe8-7d877de2f3c8",
       "title": "App Localization (i18n)",
       "description": "Add support for English and German languages using react-i18next.",
       "status": "todo",
@@ -181,7 +181,7 @@
       "createdAt": "2026-01-31"
     },
     {
-      "id": "19",
+      "id": "a9a513dc-a4c7-4068-9966-ec6fbf1bb268",
       "title": "Server Log Cleanup",
       "description": "Clear the /var/log directory of files older than 30 days.",
       "status": "done",
@@ -191,7 +191,7 @@
       "createdAt": "2026-01-29"
     },
     {
-      "id": "20",
+      "id": "d4ad006d-4f99-4bb5-95a2-9396d5d58aa5",
       "title": "Quarterly Performance Report",
       "description": "Gather statistics on completed tasks and team KPI metrics.",
       "status": "todo",
@@ -199,28 +199,830 @@
       "deadline": "2026-02-15",
       "tags": ["Design"],
       "createdAt": "2026-01-31"
+    },
+    {
+      "id": "48ca03a4-4bd4-450a-94a6-13f1ab66a03f",
+      "title": "Docker Container Setup",
+      "description": "Create Dockerfiles and docker-compose for local development.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-02-18",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-02-01"
+    },
+    {
+      "id": "ad2e4f57-0610-438e-9b51-da81aa3f3e99",
+      "title": "Responsive Table UX Improvement",
+      "description": "Enhance usability of tables on mobile devices.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-03-22",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-02-02"
+    },
+    {
+      "id": "aa74cbfc-2a41-4725-bb8a-4bbb83fbf074",
+      "title": "User Profile Page",
+      "description": "Implement editable user profile with avatar upload.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-02-22",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-02-03"
+    },
+    {
+      "id": "5bfa7e7e-b1f8-4a93-baea-7d8ef9833fae",
+      "title": "Permission Management Module",
+      "description": "Build UI for role and access control settings.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-29",
+      "tags": ["Backend", "Feature", "Security"],
+      "createdAt": "2026-02-09"
+    },
+    {
+      "id": "3c087293-3cfe-421f-abb0-66b2d4748c32",
+      "title": "Image Upload Bug",
+      "description": "Image files above 5MB cause validation errors.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-15",
+      "tags": ["Bug", "Frontend"],
+      "createdAt": "2026-02-04"
+    },
+    {
+      "id": "01467a9d-40a2-4a96-aee5-57a6d34846f6",
+      "title": "In-App Notification Service",
+      "description": "Push and display user alerts in real-time.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-12",
+      "tags": ["Frontend", "Backend", "Feature"],
+      "createdAt": "2026-02-07"
+    },
+    {
+      "id": "700774e1-3884-4201-ad43-1391cd7d4477",
+      "title": "Global Search Integration",
+      "description": "Allow full-text search across all app modules.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-01",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-02-14"
+    },
+    {
+      "id": "9c003d09-04b2-4ff5-a364-df166c892250",
+      "title": "Cloud Deployment Pipeline",
+      "description": "Setup Azure DevOps pipelines for production deployment.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-02-27",
+      "tags": ["DevOps", "Backend"],
+      "createdAt": "2026-02-11"
+    },
+    {
+      "id": "27a38a1a-d2aa-434e-99db-8d721ae93ee5",
+      "title": "404 Error Handling",
+      "description": "Customize error pages for missing routes.",
+      "status": "inProgress",
+      "priority": "low",
+      "deadline": "2026-02-20",
+      "tags": ["Frontend"],
+      "createdAt": "2026-02-09"
+    },
+    {
+      "id": "eb3b30e5-7c8e-4bfc-89c7-f0fd3c963bc2",
+      "title": "Accessibility (a11y) Audit",
+      "description": "Ensure all pages meet WCAG standards.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-16",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-02-10"
+    },
+    {
+      "id": "165a1399-b349-4a96-83d6-41c067686870",
+      "title": "End-to-End Testing with Cypress",
+      "description": "Write E2E tests for high-traffic flows.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-03-18",
+      "tags": ["QA", "Frontend"],
+      "createdAt": "2026-02-16"
+    },
+    {
+      "id": "88feb221-9972-4e4a-bf1c-20da0baa1cfc",
+      "title": "Automated DB Backups",
+      "description": "Schedule daily database snapshots.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-03-02",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-02-20"
+    },
+    {
+      "id": "c24df45a-f3e7-4323-9fff-d24f7c1b38f0",
+      "title": "SEO Improvements",
+      "description": "Optimize metadata and improve SSR for landing pages.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-13",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-02-11"
+    },
+    {
+      "id": "3f776456-1407-4ed2-a565-36b690d4c856",
+      "title": "GraphQL Schema Refactor",
+      "description": "Refactor types and resolvers for new requirements.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-01",
+      "tags": ["Backend"],
+      "createdAt": "2026-02-22"
+    },
+    {
+      "id": "495cdf51-96fb-44ff-8e6c-fa289bffeb32",
+      "title": "Session Timeout Handling",
+      "description": "Log users out on token expiry.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-25",
+      "tags": ["Backend", "Security"],
+      "createdAt": "2026-02-12"
+    },
+    {
+      "id": "49c9bd1f-e1a4-454d-ba46-15564a3402d0",
+      "title": "Integrate SASS/SCSS",
+      "description": "Replace Less with SCSS for styles.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-03-10",
+      "tags": ["Frontend"],
+      "createdAt": "2026-02-01"
+    },
+    {
+      "id": "d8c94069-696a-48d5-9636-93ff8c2e2020",
+      "title": "Lighthouse Performance Fixes",
+      "description": "Reduce blocking JS and improve web vitals score.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-03-30",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "94165c90-1ea6-4dc4-85b1-bdae6aad985e",
+      "title": "Pagination Component Refactoring",
+      "description": "Refactor list pagination for better UX.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-21",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-02-12"
+    },
+    {
+      "id": "8249500c-89ca-457e-930a-9e0f16b8291d",
+      "title": "Data Migration Scripts",
+      "description": "Write scripts for seamless DB migration.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-10",
+      "tags": ["Backend"],
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "3536976b-205c-4fd8-9f8f-f7b5373e6d14",
+      "title": "Chart Library Evaluation",
+      "description": "Compare performance of multiple chart libraries.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-03-14",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-02-13"
+    },
+    {
+      "id": "2eae114d-6fae-4b7e-bf03-eb2e44738f36",
+      "title": "Event Bus Implementation",
+      "description": "Build a pub/sub system for inter-component communication.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-17",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-02-12"
+    },
+    {
+      "id": "7eccda5c-794d-4aa6-bc77-232ea89491d1",
+      "title": "JWT Token Expiry Bug",
+      "description": "Token refresh logic fails under low-bandwidth conditions.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-02-24",
+      "tags": ["Bug", "Backend", "Security"],
+      "createdAt": "2026-02-13"
+    },
+    {
+      "id": "108a9dfe-2cf7-43d6-889e-6651428bb171",
+      "title": "Custom Scrollbars",
+      "description": "Add theme-specific scrollbars for all modals.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-02-23",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-02-22"
+    },
+    {
+      "id": "b96f48be-25d4-42da-92ee-1766632d7bb8",
+      "title": "Multi-Factor Authentication",
+      "description": "Integrate 2FA with authenticator app support.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-15",
+      "tags": ["Security", "Backend", "Feature"],
+      "createdAt": "2026-02-15"
+    },
+    {
+      "id": "ebf5e2fa-fff3-4e56-8695-118d8fbc0de3",
+      "title": "Landing Page Video Embedding",
+      "description": "Add autoplaying marketing video to the home page.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-03-18",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-02-15"
+    },
+    {
+      "id": "0f8de2b0-c4d6-4be2-9904-b19ea5bd4504",
+      "title": "API Error Logging",
+      "description": "Store all API errors in a central log for analytics.",
+      "status": "inProgress",
+      "priority": "low",
+      "deadline": "2026-03-16",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-02-17"
+    },
+    {
+      "id": "16edb5d0-cf3f-41dc-ab92-9844b0153812",
+      "title": "Time Zone Selector",
+      "description": "Let users select and save their preferred time zone.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-03-05",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-01"
+    },
+    {
+      "id": "5891cd91-a8c2-48b8-b189-0654279ddb47",
+      "title": "Stale Data Caching Strategy",
+      "description": "Tune caching policy to improve perceived performance.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-13",
+      "tags": ["Backend"],
+      "createdAt": "2026-03-02"
+    },
+    {
+      "id": "9add3e41-8f81-4f7a-bd91-579bc4045473",
+      "title": "Markdown Editor Integration",
+      "description": "Add markdown support for text areas.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-20",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-05"
+    },
+    {
+      "id": "3490dcb6-c727-44ac-8905-7d75c922bb24",
+      "title": "Invite User Workflow",
+      "description": "Allow admins to send invitations and manage membership.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-17",
+      "tags": ["Frontend", "Backend", "Feature"],
+      "createdAt": "2026-03-08"
+    },
+    {
+      "id": "1144697b-c004-4bca-b3af-1b952ef21102",
+      "title": "Global Error Boundary",
+      "description": "Handle React errors in a user-friendly way.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-02",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-03-11"
+    },
+    {
+      "id": "a10cc505-39b2-47c6-bf27-f8d20cfc1f49",
+      "title": "Rich Text Email Templates",
+      "description": "Support advanced formatting in notification emails.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-03-13",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-03-13"
+    },
+    {
+      "id": "26a05cb6-bfd5-49fa-a4fa-e056cf800aa1",
+      "title": "Audit Log Visualization",
+      "description": "Visualize login, update, and deletion events.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-10",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-03-14"
+    },
+    {
+      "id": "ddf4531b-5c5a-4502-88f3-1876be0c2cb4",
+      "title": "Weekly Usage Email Reports",
+      "description": "Send users a summary of their weekly activity.",
+      "status": "inProgress",
+      "priority": "low",
+      "deadline": "2026-03-15",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-03-14"
+    },
+    {
+      "id": "f9722ca8-8dfb-4e45-8e51-5fbb58a70d70",
+      "title": "Configurable Webhooks",
+      "description": "Allow admins to set custom webhook endpoints.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-22",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-03-17"
+    },
+    {
+      "id": "dbe8684a-0216-4150-8fd5-61798fcb2a7d",
+      "title": "Mobile Landscape UI Tweaks",
+      "description": "Optimize layout for horizontal phone orientation.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-08",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-03-15"
+    },
+    {
+      "id": "86713ea4-9567-42f2-b7ad-5331357a2a0b",
+      "title": "Production Logging Formatter",
+      "description": "Improve log file readability.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-03-24",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-03-16"
+    },
+    {
+      "id": "61aa3a5b-7ae7-4805-ada6-9c52b92d04a3",
+      "title": "Slack Notification Integration",
+      "description": "Send deployment updates to Slack channel.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-03-28",
+      "tags": ["DevOps", "Feature"],
+      "createdAt": "2026-03-11"
+    },
+    {
+      "id": "98b2bdc8-92db-4982-bc72-664aff6f1205",
+      "title": "SVG Icon Refactoring",
+      "description": "Unify icons and optimize for bundle size.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-01",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-03-21"
+    },
+    {
+      "id": "c793bb01-c9b0-4aae-81c9-d8d7a99bc5a6",
+      "title": "Auto-Save Drafts",
+      "description": "Auto-save form progress every 30 seconds in localStorage.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-03-23",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-17"
+    },
+    {
+      "id": "51eef2e0-ffb4-41b3-95b9-8549d22677a5",
+      "title": "Table Column Reordering",
+      "description": "Let users drag and reorder table columns.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-25",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-19"
+    },
+    {
+      "id": "85313c11-9df2-4494-8a84-e5f5b481a201",
+      "title": "CORS Policy Update",
+      "description": "Revise CORS policy to restrict API origins.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-03-18",
+      "tags": ["Backend", "Security"],
+      "createdAt": "2026-03-17"
+    },
+    {
+      "id": "bb929c9f-4d84-49d9-9266-fccba8ceb685",
+      "title": "User Feedback Survey",
+      "description": "Capture NPS via modal on logout.",
+      "status": "inProgress",
+      "priority": "low",
+      "deadline": "2026-04-02",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-03-21"
+    },
+    {
+      "id": "b3ce3999-f601-4fb7-8c4a-84abd1a9d4a0",
+      "title": "Custom Theming API",
+      "description": "Expose variables for custom color themes.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-10",
+      "tags": ["Frontend", "Feature", "Design"],
+      "createdAt": "2026-03-22"
+    },
+    {
+      "id": "054233f1-4058-4000-9156-567957df294e",
+      "title": "Support Ticket Export",
+      "description": "Download all tickets as CSV/Excel.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-04-15",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-22"
+    },
+    {
+      "id": "b6952a9b-7e94-416d-978e-2ebf95974686",
+      "title": "Toolbar Hotkeys",
+      "description": "Enable keyboard shortcuts for toolbar actions.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-03",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-21"
+    },
+    {
+      "id": "8583c97b-e1bd-4e81-aff2-b5b7b7259c7a",
+      "title": "Redis Caching Layer",
+      "description": "Speed up frequently run queries with Redis cache.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-04-06",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-03-25"
+    },
+    {
+      "id": "3b3e9e3c-42d5-465a-8116-830753677793",
+      "title": "Excel Import Wizard",
+      "description": "Let users import lists from XLSX files.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-05",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-27"
+    },
+    {
+      "id": "8ec91e20-4aa8-40b3-bdfd-29db37e92d15",
+      "title": "Device Fingerprinting",
+      "description": "Detect risky logins using device ID.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-03-20",
+      "tags": ["Security", "Backend"],
+      "createdAt": "2026-03-27"
+    },
+    {
+      "id": "e8d287ff-f140-44ad-ac8e-d6b7af3cbdc9",
+      "title": "Drag-and-Drop Kanban",
+      "description": "Build kanban UI for task state transitions.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-04-14",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-03-28"
+    },
+    {
+      "id": "15e08962-65c1-44b9-940f-2cf44281a500",
+      "title": "Docker Image Auto-Build",
+      "description": "Trigger image builds on push to main.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-03",
+      "tags": ["DevOps", "Backend"],
+      "createdAt": "2026-03-29"
+    },
+    {
+      "id": "13ea6a2b-09b7-4d39-8003-85cdbf98b0a3",
+      "title": "User Avatar Cropping Tool",
+      "description": "Let users crop and preview avatars before upload.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-07",
+      "tags": ["Frontend", "Feature", "Design"],
+      "createdAt": "2026-03-31"
+    },
+    {
+      "id": "821f1901-b624-420a-8ad0-f13e3c703f32",
+      "title": "k8s Helm Chart Setup",
+      "description": "Automate deployment with Kubernetes Helm charts.",
+      "status": "done",
+      "priority": "high",
+      "deadline": "2026-04-13",
+      "tags": ["DevOps", "Backend"],
+      "createdAt": "2026-04-01"
+    },
+    {
+      "id": "0ab99b7e-b509-4fd6-b24c-ecdf647bfb88",
+      "title": "Automated Changelog Generation",
+      "description": "Run release-note generation on merge.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-20",
+      "tags": ["DevOps", "Backend"],
+      "createdAt": "2026-03-31"
+    },
+    {
+      "id": "032ccd25-21a5-4cc5-aa52-4e491c76327b",
+      "title": "OAuth Provider Integration",
+      "description": "Add SSO via Google and Microsoft accounts.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-04-03",
+      "tags": ["Security", "Backend", "Feature"],
+      "createdAt": "2026-04-02"
+    },
+    {
+      "id": "46123810-95ff-418e-8326-b3c4031b5b45",
+      "title": "Preflight Environment Check",
+      "description": "Warn users about unsupported browsers/version.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-06",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-04-03"
+    },
+    {
+      "id": "c12bf7d0-56f4-4e52-bf51-c5b1bfc66051",
+      "title": "Notification Bell Animation",
+      "description": "Animate bell icon when there are unread notifications.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-03",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-04-04"
+    },
+    {
+      "id": "1a5e7204-d7f5-4a34-a97c-0b2674ebdbd3",
+      "title": "XSS Security Audit",
+      "description": "Review text inputs for script injection risks.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-15",
+      "tags": ["Security", "QA", "Frontend"],
+      "createdAt": "2026-04-04"
+    },
+    {
+      "id": "96ce3147-9bc0-4e8c-b4a8-5e36fa67ce80",
+      "title": "Local Storage Cleanup",
+      "description": "Purge stale user preferences on logout.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-04-04",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-04"
+    },
+    {
+      "id": "5c62dbeb-12e3-4947-96af-0528f1f51b5a",
+      "title": "Backend Retry Policy",
+      "description": "Retry failed requests with exponential backoff.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-08",
+      "tags": ["Backend"],
+      "createdAt": "2026-04-04"
+    },
+    {
+      "id": "5fb8c8aa-ba72-496d-af57-3e814441fc2e",
+      "title": "UI Animation Audit",
+      "description": "Review loading and transition animation timings.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-14",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-04-05"
+    },
+    {
+      "id": "e610a8ed-098b-41d3-8403-7a7d95046eec",
+      "title": "CSRF Attack Vector Test",
+      "description": "Test new endpoints for Cross-Site Request Forgery.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-04-03",
+      "tags": ["Security", "QA", "Backend"],
+      "createdAt": "2026-04-05"
+    },
+    {
+      "id": "c67a47d8-7959-41bc-83b4-b67c85d297ce",
+      "title": "Content Delivery Network Setup",
+      "description": "Move static assets to CDN for faster access.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-17",
+      "tags": ["DevOps", "Backend"],
+      "createdAt": "2026-04-06"
+    },
+    {
+      "id": "c03eaeda-055e-403f-a6ab-7e1c51026f0a",
+      "title": "Navbar Component Rewrite",
+      "description": "Refactor navigation bar with collapse/expand logic.",
+      "status": "done",
+      "priority": "low",
+      "deadline": "2026-04-07",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-04-06"
+    },
+    {
+      "id": "0ea5ff6b-b313-4e82-aca8-1865ad5bb52f",
+      "title": "Task Archive Feature",
+      "description": "Allow users to archive and unarchive tasks.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-20",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-07"
+    },
+    {
+      "id": "71e328e1-5c43-4689-adbe-ef261fa8bfab",
+      "title": "JWT Revocation Endpoint",
+      "description": "Allow tokens to be revoked instantly.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-04-14",
+      "tags": ["Backend", "Security"],
+      "createdAt": "2026-04-07"
+    },
+    {
+      "id": "807e1e4e-efb7-4014-809f-19c181b3fc60",
+      "title": "Multi-Select with Search",
+      "description": "Update tag selection to support search and filtering.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-18",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-08"
+    },
+    {
+      "id": "b3c6aee2-eee2-4ae5-a335-82a23baa5503",
+      "title": "Admin Role Switch UI",
+      "description": "Allow superusers to change user roles from frontend.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-04-09",
+      "tags": ["Frontend", "Feature", "Backend"],
+      "createdAt": "2026-04-08"
+    },
+    {
+      "id": "8ffcedfa-b65b-4b20-97b8-c2dd6a2c8a06",
+      "title": "User Block Function",
+      "description": "Let admins block/unblock users and log reason.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-04-17",
+      "tags": ["Backend", "Feature"],
+      "createdAt": "2026-04-08"
+    },
+    {
+      "id": "337cf20a-5f67-4092-83ae-36e6ae7ffa1e",
+      "title": "Login Attempt Rate Limit",
+      "description": "Prevent brute force attacks with rate limiting.",
+      "status": "todo",
+      "priority": "high",
+      "deadline": "2026-04-14",
+      "tags": ["Backend", "Security"],
+      "createdAt": "2026-04-09"
+    },
+    {
+      "id": "3648eb15-bcae-4d17-8f8b-d355fcbee616",
+      "title": "Audit Trail Filtering",
+      "description": "Add filters to activity logs for user and date.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-21",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "c6e6370e-ce6d-474f-bd5b-13dee9ff2d23",
+      "title": "OpenAPI Spec Validation",
+      "description": "Enforce OpenAPI consistency in CI.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-04-10",
+      "tags": ["QA", "Backend"],
+      "createdAt": "2026-04-10"
+    },
+    {
+      "id": "f048124c-4e9a-455b-844c-979b7c7a302b",
+      "title": "Holiday Calendar Sync",
+      "description": "Sync events with external calendar APIs.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-26",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-11"
+    },
+    {
+      "id": "27949b2d-ecbb-400d-88df-5729660cfd82",
+      "title": "Error Monitor Dashboard",
+      "description": "Build dashboard to visualize Sentry/LogRocket errors.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-04-25",
+      "tags": ["Frontend", "QA"],
+      "createdAt": "2026-04-12"
+    },
+    {
+      "id": "7cadfc70-e7a2-47a2-b6bc-2be48f2a4877",
+      "title": "Threaded Comments Feature",
+      "description": "Support nested discussion on all tasks.",
+      "status": "inProgress",
+      "priority": "high",
+      "deadline": "2026-04-15",
+      "tags": ["Frontend", "Feature"],
+      "createdAt": "2026-04-13"
+    },
+    {
+      "id": "0cc4db51-a075-4782-ad19-7fb38dbfa53b",
+      "title": "Date Range Picker Extension",
+      "description": "Add quarter, fiscal, and year presets.",
+      "status": "todo",
+      "priority": "low",
+      "deadline": "2026-04-29",
+      "tags": ["Frontend", "Feature", "Design"],
+      "createdAt": "2026-04-13"
+    },
+    {
+      "id": "fc5db625-9c43-4b8a-ac2b-2b72c3131e6e",
+      "title": "Automated License Renewal",
+      "description": "Notify and renew SaaS licenses automatically.",
+      "status": "done",
+      "priority": "medium",
+      "deadline": "2026-04-20",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-04-13"
+    },
+    {
+      "id": "665f7e95-7f90-49cb-9a89-b3be8b0e39f0",
+      "title": "Inactive Users Cleanup",
+      "description": "Prune users not active in past 12 months.",
+      "status": "inProgress",
+      "priority": "medium",
+      "deadline": "2026-04-24",
+      "tags": ["Backend", "DevOps"],
+      "createdAt": "2026-04-14"
+    },
+    {
+      "id": "1e214c58-1f32-444b-9e65-fa83b16a122a",
+      "title": "Custom Accessibility Color Scheme",
+      "description": "High-contrast and dyslexia-friendly options.",
+      "status": "todo",
+      "priority": "medium",
+      "deadline": "2026-05-02",
+      "tags": ["Frontend", "Design"],
+      "createdAt": "2026-04-14"
     }
   ],
   "tags": [
     {
-      "id": "1",
+      "id": "68eef6e8-690c-42eb-b590-13c3ad7080c5",
       "name": "Frontend"
     },
     {
-      "id": "2",
+      "id": "5a8eedad-f8d5-4f8e-833a-160b372c9e8b",
       "name": "Backend"
     },
     {
-      "id": "3",
+      "id": "416cb526-ad7a-44d1-87e9-454b6b3dea03",
       "name": "Design"
     },
     {
-      "id": "4",
+      "id": "4fb22062-7be7-4a19-9827-9a4535bd905a",
       "name": "Bug"
     },
     {
-      "id": "5",
+      "id": "31d61ed1-3b17-4faf-8e00-83407187fa46",
       "name": "Feature"
+    },
+    {
+      "id": "23693eea-5830-45e8-b4e2-737c3b03d3fe",
+      "name": "DevOps"
+    },
+    {
+      "id": "6f8bb1a6-c7ae-4df6-93ec-e5eb869e48ce",
+      "name": "Security"
+    },
+    {
+      "id": "3a96bcaa-b159-4541-92bc-338e43309d85",
+      "name": "QA"
     }
   ]
 }

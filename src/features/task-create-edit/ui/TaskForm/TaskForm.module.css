@@ -1,0 +1,11 @@
+.submitButton {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.statusContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
