@@ -1,9 +1,23 @@
-import { useGetTaskByIdQuery } from "@/entities/task/model/task.api";
+import {
+  useEditTaskMutation,
+  useGetTaskByIdQuery,
+} from "@/entities/task/model/task.api";
 import {
   TASK_STATUSE_LABELS,
+  type TaskFormValues,
   type TaskPriority,
 } from "@/entities/task/model/task.type";
-import { Card, Tag, Typography, Space, Button, Empty, Badge } from "antd";
+import {
+  Card,
+  Tag,
+  Typography,
+  Space,
+  Button,
+  Empty,
+  Badge,
+  Modal,
+  message,
+} from "antd";
 import { useNavigate, useParams } from "react-router";
 import dayjs from "dayjs";
 import {
@@ -14,6 +28,8 @@ import {
 } from "@ant-design/icons";
 import styles from "./TaskDetailesPage.module.css";
 import DeleteTaskButton from "@/features/task-delete/ui/DeleteTaskButton";
+import TaskForm from "@/features/task-create-edit/ui/TaskForm";
+import { useState } from "react";
 
 const { Title, Paragraph, Text } = Typography;
 
@@ -27,6 +43,29 @@ const TaskDetailsPage = () => {
   const { id } = useParams();
   const { data: task } = useGetTaskByIdQuery(id!);
   const navigate = useNavigate();
+
+  const [open, setOpen] = useState(false);
+
+  const [editTask] = useEditTaskMutation();
+
+  const onClick = () => {
+    setOpen(true);
+  };
+
+  const onSubmit = async (values: TaskFormValues) => {
+    try {
+      await editTask({ id: id!, payload: values }).unwrap();
+      message.success("Task is edited");
+    } catch {
+      message.error("Error while creating task");
+    } finally {
+      setOpen(false);
+    }
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
 
   if (!task) {
     return (
@@ -89,7 +128,12 @@ const TaskDetailsPage = () => {
             </div>
           </div>
           <Space className={styles.actions}>
-            <Button icon={<EditOutlined />}>Edit</Button>
+            <Button icon={<EditOutlined />} onClick={onClick}>
+              Edit
+            </Button>
+            <Modal open={open} footer={null} centered onCancel={onClose}>
+              <TaskForm task={task} onCancel={onClose} onSubmit={onSubmit} />
+            </Modal>
             <DeleteTaskButton task={task} />
           </Space>
         </Space>

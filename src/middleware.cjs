@@ -4,7 +4,8 @@ module.exports = (req, res, next) => {
   if (req.method === "POST") {
     req.body.createdAt = now;
     req.body.updatedAt = now;
-  } else if ("PATCH" === req.method) {
+  }
+  if ("PATCH" === req.method) {
     req.body.updatedAt = now;
   }
 

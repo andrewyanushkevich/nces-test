@@ -1,5 +1,6 @@
 import z from "zod";
 import { TASK_PRIORITY_KEYS, TASK_STATUSE_KEYS } from "./task.type";
+import type { Dayjs } from "dayjs";
 
 export const taskSchema = z.object({
   title: z
@@ -14,11 +15,16 @@ export const taskSchema = z.object({
   priority: z.enum(TASK_PRIORITY_KEYS, {
     error: "Priority is required",
   }),
-  deadline: z.preprocess((val) => {
-    if (val instanceof Date) {
-      return val.toISOString();
-    }
-    return val;
-  }, z.string().datetime({ message: "Deadline is required" })),
+  deadline: z.preprocess(
+    (val: undefined | Dayjs) => {
+      if (val && typeof val.toISOString === "function") {
+        return val.toDate();
+      }
+      return val;
+    },
+    z.date({
+      error: "Deadline is required",
+    })
+  ),
   tags: z.array(z.string()).min(1, "At least one tag must be selected"),
 });

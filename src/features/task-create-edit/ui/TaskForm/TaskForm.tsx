@@ -5,6 +5,7 @@ import {
   TASK_STATUSE_KEYS,
   TASK_STATUSE_LABELS,
   type Task,
+  type TaskFormValues,
 } from "@/entities/task/model/task.type";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Button, DatePicker, Form, Input, Radio, Select } from "antd";
@@ -13,14 +14,13 @@ import type { FC } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import styles from "./TaskForm.module.css";
+import dayjs from "dayjs";
 
 interface TaskFormProps {
   task?: Task;
-  onSubmit: (values: FormValues) => void;
+  onSubmit: (values: TaskFormValues) => void;
   onCancel: () => void;
 }
-
-type FormValues = Omit<Task, "id" | "createdAt" | "updatedAt">;
 
 const statusOptions = TASK_STATUSE_KEYS.map((key) => ({
   value: key,
@@ -34,23 +34,23 @@ const priorityOptions = TASK_PRIORITY_KEYS.map((priority) => ({
 
 const TaskForm: FC<TaskFormProps> = (props) => {
   const { task, onSubmit, onCancel } = props;
+
   const { control, formState, handleSubmit, reset } = useForm({
     defaultValues: {
       title: task?.title,
       description: task?.description,
       status: task?.status,
       priority: task?.priority,
-      deadline: task?.deadline,
+      deadline: dayjs(task?.deadline),
       tags: task?.tags,
     },
     resolver: zodResolver(taskSchema),
     mode: "onBlur",
   });
 
-  const { errors } = formState;
+  const { errors, isValid } = formState;
 
-  const onFinish = (values: FormValues) => {
-    console.log("values", values);
+  const onFinish = (values: TaskFormValues) => {
     onSubmit(values);
     reset();
   };
@@ -164,7 +164,7 @@ const TaskForm: FC<TaskFormProps> = (props) => {
       </Form.Item>
       <div className={styles.submitButton}>
         <Button onClick={onCancel}>Cancel</Button>
-        <Button type="primary" htmlType="submit">
+        <Button type="primary" htmlType="submit" disabled={!isValid}>
           {task ? "Edit" : "Create"}
         </Button>
       </div>
