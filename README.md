@@ -1,73 +1,95 @@
-# React + TypeScript + Vite
+# Task Management SPA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive Single Page Application (SPA) for managing tasks, built with the latest industry standards. This project demonstrates a clean UI, efficient state management, and robust filtering/pagination capabilities using **React 19** and **Ant Design 6**.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Getting Started
 
-## React Compiler
+Follow these steps to get the project up and running on your local machine. This project requires both the frontend and the mock backend server to be running simultaneously.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Prerequisites
 
-## Expanding the ESLint configuration
+- Ensure you have **Node.js** (version 20 or higher recommended for React 19) installed.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Installation
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+1. **Clone the repository:**
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+   ```bash
+   git clone <repository-url>
+   ```
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd task-management-spa
+   ```
+
+3. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+### Running the App
+
+You need to open two terminal windows to run the full stack:
+
+#### Terminal 1: Start the Backend Server
+
+```bash
+npm run server
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+- The mock API ([json-server](https://github.com/typicode/json-server)) will be available at [http://localhost:3001](http://localhost:3001).
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### Terminal 2: Start the Frontend App
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+- The Vite development server will be available at [http://localhost:5173](http://localhost:5173).
+
+---
+
+## 🏗 Architecture Overview
+
+The project is strictly organized following the **Feature-Sliced Design (FSD)** methodology, ensuring clear separation of concerns, scalability, and maintainability.
+
+### 1. Layers Structure
+
+- **App:** Global settings, providers (Ant Design ConfigProvider), routing configuration.
+- **Pages:** Composition of widgets to form complete application views (Task List, Task Details).
+- **Widgets:** Large self-contained blocks like the global Header, TaskBoard, and TaskToolbar.
+- **Features:** User interactions with business value (Task filtering, create/edit forms, delete actions).
+- **Entities:** Business entities (Task, Tag) with their specific models, API logic (RTK Query endpoints), and UI fragments.
+- **Shared:** Reusable logic and UI components (API base setup, custom hooks like `useDebounceCallback`).
+
+### 2. State Management & API Logic
+
+- **RTK Query:** Integrated at the entities layer for data synchronization, caching, and optimistic updates.
+- **Redux Toolkit:** Global store management, located in the `app/store` layer, handles feature-specific states like task filters.
+- **React 19 Hooks:** Modern concurrent rendering and state management.
+
+### 3. UI & Styling
+
+- **Ant Design 6:** Utilizes the latest design tokens for a consistent and professional look.
+- **CSS Modules:** Used across all layers (e.g., `TaskCard.module.css`, `Header.module.css`) to ensure style isolation and prevent global namespace pollution.
+
+### 4. Data Persistence
+
+- **JSON Server:** Emulates a production RESTful environment with a custom middleware configuration.
+
+---
+
+## 🛠 Tech Stack
+
+- **Frontend Framework:** React 19 (latest)
+- **Architecture:** Feature-Sliced Design (FSD)
+- **Build Tool:** Vite
+- **Language:** TypeScript
+- **UI Library:** Ant Design 6
+- **State & Data Fetching:** Redux Toolkit & RTK Query
+- **API Simulation:** JSON Server
+- **Date Utility:** Day.js
