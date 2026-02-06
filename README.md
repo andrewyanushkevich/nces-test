@@ -64,13 +64,12 @@ The project is strictly organized following the **Feature-Sliced Design (FSD)** 
 - **Widgets:** Large self-contained blocks like the global Header, TaskBoard, and TaskToolbar.
 - **Features:** User interactions with business value (Task filtering, create/edit forms, delete actions).
 - **Entities:** Business entities (Task, Tag) with their specific models, API logic (RTK Query endpoints), and UI fragments.
-- **Shared:** Reusable logic and UI components (API base setup, custom hooks like `useDebounceCallback`).
+- **Shared:** Reusable logic and UI components.
 
 ### 2. State Management & API Logic
 
 - **RTK Query:** Integrated at the entities layer for data synchronization, caching, and optimistic updates.
 - **Redux Toolkit:** Global store management, located in the `app/store` layer, handles feature-specific states like task filters.
-- **React 19 Hooks:** Modern concurrent rendering and state management.
 
 ### 3. UI & Styling
 
@@ -80,6 +79,9 @@ The project is strictly organized following the **Feature-Sliced Design (FSD)** 
 ### 4. Data Persistence
 
 - **JSON Server:** Emulates a production RESTful environment with a custom middleware configuration.
+- **Advanced Search:** Instantly find tasks with a global search that matches terms in titles or descriptions.
+- **Smart Filtering:** Filter tasks by multiple criteria, including status, priority, and categories (tags), to quickly narrow down lists.
+- **Full CRUD Support:** Effortlessly create, update, and manage the complete lifecycle of tasks with persistent storage.
 
 ---
 
