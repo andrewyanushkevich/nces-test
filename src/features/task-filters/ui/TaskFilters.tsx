@@ -9,8 +9,8 @@ import Search from "antd/es/transfer/search";
 
 import styles from "./TaskFilters.module.css";
 import { useGetTagsQuery } from "@/entities/tag/model/tag.api";
-import { setFilters } from "../model/taskFilterSlice";
-import { useDispatch } from "react-redux";
+import { getFilters, setFilters } from "../model/taskFilterSlice";
+import { useDispatch, useSelector } from "react-redux";
 import { useDebounceCallback } from "@/shared/hooks/useDebounceCallback";
 
 interface OptionType {
@@ -34,28 +34,33 @@ const priorityOptions: OptionType[] = [
   })),
 ];
 
+const dateSortOptions: OptionType[] = [
+  { value: "desc", label: "Newest first" },
+  { value: "asc", label: "Oldest first" },
+];
+
 const TaskFilters = () => {
   const { data } = useGetTagsQuery();
+  const filters = useSelector(getFilters);
 
   const dispatch = useDispatch();
 
   const tagOptions = data?.map((tag) => ({
     key: tag.id,
     value: tag.name,
+    label: tag.name,
   }));
 
   function onFilterChange(option: string[], key: "tags"): void;
   function onFilterChange(
     option: OptionType | string,
-    key: "priority" | "status"
+    key: "priority" | "status" | "sortByDate"
   ): void;
 
   function onFilterChange(
     option: OptionType | string | string[],
-    key: "priority" | "status" | "tags"
+    key: "priority" | "status" | "tags" | "sortByDate"
   ) {
-    console.log("option", option);
-
     if (key === "tags") {
       const tagValues = Array.isArray(option)
         ? option
@@ -90,6 +95,7 @@ const TaskFilters = () => {
           placeholder="Filter by status"
           onChange={(value) => onFilterChange(value, "status")}
           labelInValue
+          value={filters.status}
         />
       </Col>
       <Col xs={24} md={4}>
@@ -97,9 +103,10 @@ const TaskFilters = () => {
           className={styles.statusFilter}
           options={priorityOptions}
           defaultValue="All"
-          placeholder="Filter by status"
+          placeholder="Filter by priority"
           onChange={(value) => onFilterChange(value, "priority")}
           labelInValue
+          value={filters.priority}
         />
       </Col>
       <Col xs={24} md={6}>
@@ -111,6 +118,15 @@ const TaskFilters = () => {
           maxTagCount="responsive"
           onChange={(value) => onFilterChange(value, "tags")}
           allowClear
+        />
+      </Col>
+      <Col xs={24} md={4}>
+        <Select
+          className={styles.statusFilter}
+          options={dateSortOptions}
+          defaultValue="desc"
+          placeholder="Sort by date"
+          onChange={(value) => onFilterChange(value, "sortByDate")}
         />
       </Col>
     </Row>

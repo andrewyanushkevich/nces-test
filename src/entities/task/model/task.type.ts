@@ -19,6 +19,7 @@ export interface TaskFilters {
   status?: TaskStatus | "all";
   tags?: string[];
   search?: string;
+  sortByDate?: "desk" | "asc";
 }
 
 export const TASK_STATUSE_LABELS: Record<TaskStatus, string> = {

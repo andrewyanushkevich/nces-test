@@ -1,14 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-import type { TaskPriority, TaskStatus } from "@entities/task/model/task.type";
+import type { TaskFilters } from "@entities/task/model/task.type";
 import type { RootStore } from "@/app/store/store";
 
 interface InitialState {
-  filters: {
-    priority?: TaskPriority | "all";
-    status?: TaskStatus | "all";
-    tags?: string[];
-  };
+  filters: TaskFilters;
 }
 
 const initialState: InitialState = {

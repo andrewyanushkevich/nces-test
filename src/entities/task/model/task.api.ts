@@ -1,5 +1,5 @@
 import { baseApi } from "@/shared/api/base.api";
-import type { Task, TaskFilters } from "./task.type";
+import type { Task, TaskFilters, TaskFormValues } from "./task.type";
 
 export const taskApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -18,6 +18,11 @@ export const taskApi = baseApi.injectEndpoints({
         }
         if (filters.search) {
           params.q = filters.search;
+        }
+
+        if (filters.sortByDate) {
+          params["_sort"] = "deadline";
+          params["_order"] = filters.sortByDate;
         }
 
         const search = new URLSearchParams(
