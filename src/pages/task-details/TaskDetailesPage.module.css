@@ -109,8 +109,12 @@
   color: #ef4444;
 }
 
-/* Priority color reference for usage with Tag component or dynamic styling:
-.lowPriority { color: blue; }
-.mediumPriority { color: orange; }
-.highPriority { color: red; }
-*/
+.loadingState {
+  width: 100vw;
+  height: 100vh;
+}
+
+.emptyState {
+  padding: 80px;
+  text-align: center;
+}

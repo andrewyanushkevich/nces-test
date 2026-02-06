@@ -17,6 +17,8 @@ import {
   Badge,
   Modal,
   message,
+  Flex,
+  Spin,
 } from "antd";
 import { useNavigate, useParams } from "react-router";
 import dayjs from "dayjs";
@@ -24,6 +26,7 @@ import {
   ArrowLeftOutlined,
   CalendarOutlined,
   EditOutlined,
+  LoadingOutlined,
   TagOutlined,
 } from "@ant-design/icons";
 import styles from "./TaskDetailesPage.module.css";
@@ -41,7 +44,7 @@ const priorityColors: Record<TaskPriority, string> = {
 
 const TaskDetailsPage = () => {
   const { id } = useParams();
-  const { data: task } = useGetTaskByIdQuery(id!);
+  const { data: task, isFetching, isLoading } = useGetTaskByIdQuery(id!);
   const navigate = useNavigate();
 
   const [open, setOpen] = useState(false);
@@ -67,9 +70,17 @@ const TaskDetailsPage = () => {
     setOpen(false);
   };
 
+  if (isLoading || isFetching) {
+    return (
+      <Flex align="center" justify="center" className={styles.loadingState}>
+        <Spin indicator={<LoadingOutlined style={{ fontSize: 48 }} spin />} />
+      </Flex>
+    );
+  }
+
   if (!task) {
     return (
-      <div style={{ padding: 80, textAlign: "center" }}>
+      <div className={styles.emptyState}>
         <Empty description="Task is not found" />
         <Button style={{ marginTop: 16 }} onClick={() => navigate("/")}>
           Back
