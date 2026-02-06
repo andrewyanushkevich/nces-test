@@ -1,5 +1,10 @@
 import { baseApi } from "@/shared/api/base.api";
-import type { Task, TaskFilters, TaskFormValues } from "./task.type";
+import type {
+  Task,
+  TaskFilters,
+  TaskFormValues,
+  TaskStatus,
+} from "./task.type";
 
 export const taskApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
@@ -67,6 +72,14 @@ export const taskApi = baseApi.injectEndpoints({
       }),
       invalidatesTags: (_result, _error, { id }) => [{ type: "Tasks", id }],
     }),
+    updateStatus: builder.mutation<Task, { id: string; status: TaskStatus }>({
+      query: ({ id, status }) => ({
+        url: `tasks/${id}`,
+        method: "PATCH",
+        body: { status },
+      }),
+      invalidatesTags: (_result, _error, { id }) => [{ type: "Tasks", id }],
+    }),
     deleteTask: builder.mutation<void, string>({
       query: (id) => ({
         url: `tasks/${id}`,
@@ -82,5 +95,6 @@ export const {
   useGetTaskByIdQuery,
   useCreateTaskMutation,
   useEditTaskMutation,
+  useUpdateStatusMutation,
   useDeleteTaskMutation,
 } = taskApi;

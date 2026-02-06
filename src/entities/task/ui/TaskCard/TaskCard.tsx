@@ -13,7 +13,8 @@ import type { FC } from "react";
 import styles from "./TaskCard.module.css";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
-import { useEditTaskMutation } from "../../model/task.api";
+import { useUpdateStatusMutation } from "../../model/task.api";
+import { useDispatch } from "react-redux";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -37,7 +38,9 @@ const TaskCard: FC<TaskCardProps> = (props) => {
 
   const navigate = useNavigate();
 
-  const [updateTask] = useEditTaskMutation();
+  const [updateStatus] = useUpdateStatusMutation();
+
+  const dispatch = useDispatch();
 
   const isOverdue =
     dayjs(task.deadline).isBefore(dayjs(), "day") && task.status !== "done";
@@ -47,7 +50,7 @@ const TaskCard: FC<TaskCardProps> = (props) => {
   };
 
   const onChangeStatus = (value: TaskStatus) => {
-    updateTask({
+    updateStatus({
       id: task.id,
       payload: { status: value },
     });
