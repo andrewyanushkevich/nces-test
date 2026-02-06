@@ -17,13 +17,13 @@ Follow these steps to get the project up and running on your local machine. This
 1. **Clone the repository:**
 
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/andrewyanushkevich/nces-test
    ```
 
 2. **Navigate to the project directory:**
 
    ```bash
-   cd task-management-spa
+   cd nces-test
    ```
 
 3. **Install dependencies:**
