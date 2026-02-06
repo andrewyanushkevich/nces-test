@@ -41,3 +41,9 @@ export const TASK_PRIORITY_LABELS: Record<TaskPriority, string> = {
 export const TASK_PRIORITY_KEYS = Object.keys(
   TASK_PRIORITY_LABELS
 ) as TaskPriority[];
+
+export type TaskFormValues =
+  | Omit<Task, "id" | "createdAt" | "updatedAt">
+  | {
+      deadline: Date;
+    };

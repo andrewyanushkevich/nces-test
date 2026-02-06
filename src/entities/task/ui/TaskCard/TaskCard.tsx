@@ -1,18 +1,26 @@
 import {
   TASK_PRIORITY_LABELS,
+  TASK_STATUSE_KEYS,
   TASK_STATUSE_LABELS,
   type Task,
   type TaskPriority,
+  type TaskStatus,
 } from "@entities/task/model/task.type";
-import { Button, Card, Dropdown, Space, Tag, Typography } from "antd";
+import { Card, Select, Space, Tag, Typography } from "antd";
 import dayjs from "dayjs";
 import type { FC } from "react";
 
 import styles from "./TaskCard.module.css";
 import { ClockCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
+import { useEditTaskMutation } from "../../model/task.api";
 
 const { Title, Text, Paragraph } = Typography;
+
+const statusOptions = TASK_STATUSE_KEYS.map((key) => ({
+  value: key,
+  label: TASK_STATUSE_LABELS[key],
+}));
 
 interface TaskCardProps {
   task: Task;
@@ -29,11 +37,20 @@ const TaskCard: FC<TaskCardProps> = (props) => {
 
   const navigate = useNavigate();
 
+  const [updateTask] = useEditTaskMutation();
+
   const isOverdue =
     dayjs(task.deadline).isBefore(dayjs(), "day") && task.status !== "done";
 
   const onClick = () => {
     navigate(`task/${task.id}`);
+  };
+
+  const onChangeStatus = (value: TaskStatus) => {
+    updateTask({
+      id: task.id,
+      payload: { status: value },
+    });
   };
 
   return (
@@ -48,26 +65,21 @@ const TaskCard: FC<TaskCardProps> = (props) => {
           alignItems: "flex-start",
         }}
       >
-        <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div
+          style={{ display: "flex", justifyContent: "space-between" }}
+          onClick={(e) => e.stopPropagation()}
+        >
           <Space>
             <Tag color={TAG_COLORS[task.priority]}>
               {TASK_PRIORITY_LABELS[task.priority]}
             </Tag>
           </Space>
-          <Dropdown
-            trigger={["click"]}
-            menu={{
-              items: Object.values(TASK_STATUSE_LABELS).map((label) => ({
-                label,
-                type: "item",
-                key: label,
-              })),
-            }}
-          >
-            <Button type="dashed" onClick={(e) => e.stopPropagation()}>
-              Change status
-            </Button>
-          </Dropdown>
+          <Select
+            value={task.status}
+            onChange={onChangeStatus}
+            options={statusOptions}
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
         <Title level={5} style={{ marginTop: 12 }}>
           {task.title}
@@ -77,14 +89,7 @@ const TaskCard: FC<TaskCardProps> = (props) => {
         </Paragraph>
         <div style={{ margin: "12px 0" }}>
           {task.tags.map((tag) => (
-            <Tag
-              key={tag}
-              color="blue"
-              // onClick={(e) => {
-              //   e.stopPropagation();
-              //   setTagFilter(tag);
-              // }}
-            >
+            <Tag key={tag} color="blue">
               {tag}
             </Tag>
           ))}

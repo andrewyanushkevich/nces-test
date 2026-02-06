@@ -6,7 +6,7 @@ import styles from "./TaskToobar.module.css";
 import TaskForm from "@/features/task-create-edit/ui/TaskForm";
 import { useState } from "react";
 import { useCreateTaskMutation } from "@/entities/task/model/task.api";
-import type { Task } from "@/entities/task/model/task.type";
+import type { TaskFormValues } from "@/entities/task/model/task.type";
 
 const TaskToolbar = () => {
   const [open, setOpen] = useState(false);
@@ -17,12 +17,9 @@ const TaskToolbar = () => {
     setOpen(true);
   };
 
-  const onSubmit = async (
-    values: Omit<Task, "id" | "createdAt" | "updatedAt">
-  ) => {
+  const onSubmit = async (values: TaskFormValues) => {
     try {
-      const res = await createTask(values).unwrap();
-      console.log("res", res);
+      await createTask(values).unwrap();
       message.success("Task is created");
     } catch {
       message.error("Error while creating task");
