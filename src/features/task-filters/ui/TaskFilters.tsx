@@ -118,6 +118,7 @@ const TaskFilters = () => {
           maxTagCount="responsive"
           onChange={(value) => onFilterChange(value, "tags")}
           allowClear
+          value={filters.tags}
         />
       </Col>
       <Col xs={24} md={4}>

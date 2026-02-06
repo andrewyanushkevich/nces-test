@@ -15,6 +15,7 @@ import { ClockCircleOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router";
 import { useUpdateStatusMutation } from "../../model/task.api";
 import { useDispatch } from "react-redux";
+import { setFilters } from "@/features/task-filters/model/taskFilterSlice";
 
 const { Title, Text, Paragraph } = Typography;
 
@@ -56,6 +57,11 @@ const TaskCard: FC<TaskCardProps> = (props) => {
     });
   };
 
+  const onTagClick = (tag: string) => (e: React.MouseEvent) => {
+    e.stopPropagation();
+    dispatch(setFilters({ tags: tag }));
+  };
+
   return (
     <Card
       hoverable
@@ -92,7 +98,7 @@ const TaskCard: FC<TaskCardProps> = (props) => {
         </Paragraph>
         <div style={{ margin: "12px 0" }}>
           {task.tags.map((tag) => (
-            <Tag key={tag} color="blue">
+            <Tag key={tag} color="blue" onClick={onTagClick(tag)}>
               {tag}
             </Tag>
           ))}
