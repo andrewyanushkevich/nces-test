@@ -3,6 +3,7 @@ import {
   TASK_PRIORITY_LABELS,
   TASK_STATUSE_KEYS,
   TASK_STATUSE_LABELS,
+  type TaskFilters as TaskFiltersType,
 } from "@/entities/task/model/task.type";
 import { Col, Row, Select } from "antd";
 import Search from "antd/es/transfer/search";
@@ -34,9 +35,14 @@ const priorityOptions: OptionType[] = [
   })),
 ];
 
-const dateSortOptions: OptionType[] = [
+const createdDateSortOptions: OptionType[] = [
   { value: "desc", label: "Newest first" },
   { value: "asc", label: "Oldest first" },
+];
+
+const deadlineSortOptions: OptionType[] = [
+  { value: "desc", label: "Due latest" },
+  { value: "asc", label: "Due soonest" },
 ];
 
 const TaskFilters = () => {
@@ -54,12 +60,12 @@ const TaskFilters = () => {
   function onFilterChange(option: string[], key: "tags"): void;
   function onFilterChange(
     option: OptionType | string,
-    key: "priority" | "status" | "sortByDate"
+    key: Exclude<keyof TaskFiltersType, "tags">
   ): void;
 
   function onFilterChange(
     option: OptionType | string | string[],
-    key: "priority" | "status" | "tags" | "sortByDate"
+    key: keyof TaskFiltersType
   ) {
     if (key === "tags") {
       const tagValues = Array.isArray(option)
@@ -84,7 +90,7 @@ const TaskFilters = () => {
 
   return (
     <Row gutter={[16, 16]}>
-      <Col xs={24} md={6}>
+      <Col xs={24} md={4}>
         <Search placeholder="Search task" onChange={deboubncedSearchChange} />
       </Col>
       <Col xs={24} md={4}>
@@ -121,13 +127,22 @@ const TaskFilters = () => {
           value={filters.tags}
         />
       </Col>
-      <Col xs={24} md={4}>
+      <Col xs={24} md={3}>
         <Select
           className={styles.statusFilter}
-          options={dateSortOptions}
+          options={deadlineSortOptions}
           defaultValue="desc"
-          placeholder="Sort by date"
-          onChange={(value) => onFilterChange(value, "sortByDate")}
+          placeholder="Sort by deadline"
+          onChange={(value) => onFilterChange(value, "sortByDeadline")}
+        />
+      </Col>
+      <Col xs={24} md={3}>
+        <Select
+          className={styles.statusFilter}
+          options={createdDateSortOptions}
+          defaultValue="desc"
+          placeholder="Sort by create date"
+          onChange={(value) => onFilterChange(value, "sortByCreateDate")}
         />
       </Col>
     </Row>

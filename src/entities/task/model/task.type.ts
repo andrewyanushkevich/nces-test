@@ -19,7 +19,8 @@ export interface TaskFilters {
   status?: TaskStatus | "all";
   tags?: string[];
   search?: string;
-  sortByDate?: "desk" | "asc";
+  sortByDeadline?: "desk" | "asc";
+  sortByCreateDate?: "desk" | "asc";
   currentPage?: number;
   limitPerPage?: number;
 }

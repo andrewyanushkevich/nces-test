@@ -53,7 +53,7 @@ const TaskCard: FC<TaskCardProps> = (props) => {
   const onChangeStatus = (value: TaskStatus) => {
     updateStatus({
       id: task.id,
-      payload: { status: value },
+      status: value,
     });
   };
 

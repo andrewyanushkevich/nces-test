@@ -26,13 +26,18 @@ export const taskApi = baseApi.injectEndpoints({
             params.q = filters.search;
           }
 
-          if (filters.sortByDate) {
+          if (filters.sortByDeadline) {
             params["_sort"] = "deadline";
-            params["_order"] = filters.sortByDate;
+            params["_order"] = filters.sortByDeadline;
+          }
+
+          if (filters.sortByCreateDate) {
+            params["_sort"] = "createdAt";
+            params["_order"] = filters.sortByCreateDate;
           }
 
           params["_page"] = `${filters.currentPage || 1}`;
-          params["_per_page"] = `${filters.limitPerPage || 10}`;
+          params["_limit"] = `${filters.limitPerPage || 10}`;
 
           const search = new URLSearchParams(
             Object.entries(params).flatMap(([key, value]) =>
