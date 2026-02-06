@@ -8,44 +8,59 @@ import type {
 
 export const taskApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
-    getTasks: builder.query<Task[], TaskFilters>({
-      query: (filters) => {
-        const params: Record<string, string | string[]> = {};
+    getTasks: builder.query<{ tasks: Task[]; totalCount: number }, TaskFilters>(
+      {
+        query: (filters) => {
+          const params: Record<string, string | string[]> = {};
 
-        if (filters.priority && filters.priority !== "all") {
-          params.priority = filters.priority;
-        }
-        if (filters.status && filters.status !== "all") {
-          params.status = filters.status;
-        }
-        if (filters.tags && filters.tags.length > 0) {
-          params.tags = filters.tags;
-        }
-        if (filters.search) {
-          params.q = filters.search;
-        }
+          if (filters.priority && filters.priority !== "all") {
+            params.priority = filters.priority;
+          }
+          if (filters.status && filters.status !== "all") {
+            params.status = filters.status;
+          }
+          if (filters.tags && filters.tags.length > 0) {
+            params.tags = filters.tags;
+          }
+          if (filters.search) {
+            params.q = filters.search;
+          }
 
-        if (filters.sortByDate) {
-          params["_sort"] = "deadline";
-          params["_order"] = filters.sortByDate;
-        }
+          if (filters.sortByDate) {
+            params["_sort"] = "deadline";
+            params["_order"] = filters.sortByDate;
+          }
 
-        const search = new URLSearchParams(
-          Object.entries(params).flatMap(([key, value]) =>
-            Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]
-          )
-        ).toString();
+          params["_page"] = `${filters.currentPage || 1}`;
+          params["_per_page"] = `${filters.limitPerPage || 10}`;
 
-        return search ? `tasks?${search}` : "tasks";
-      },
-      providesTags: (result) =>
-        result
-          ? [
-              ...result.map(({ id }) => ({ type: "Tasks", id } as const)),
-              { type: "Tasks", id: "LIST" },
-            ]
-          : [{ type: "Tasks", id: "LIST" }],
-    }),
+          const search = new URLSearchParams(
+            Object.entries(params).flatMap(([key, value]) =>
+              Array.isArray(value) ? value.map((v) => [key, v]) : [[key, value]]
+            )
+          ).toString();
+
+          return search ? `tasks?${search}` : "tasks";
+        },
+        transformResponse: (apiResponse: Task[], meta) => {
+          return {
+            tasks: apiResponse,
+            totalCount: Number(
+              meta?.response?.headers.get("X-Total-Count") || 0
+            ),
+          };
+        },
+        providesTags: (result) =>
+          result
+            ? [
+                ...result.tasks.map(
+                  ({ id }) => ({ type: "Tasks", id } as const)
+                ),
+                { type: "Tasks", id: "LIST" },
+              ]
+            : [{ type: "Tasks", id: "LIST" }],
+      }
+    ),
     getTaskById: builder.query<Task, string>({
       query: (id) => `tasks/${id}`,
       providesTags: (_result, _error, id) => [{ type: "Tasks", id }],

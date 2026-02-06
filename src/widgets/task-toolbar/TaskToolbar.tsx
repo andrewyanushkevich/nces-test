@@ -33,7 +33,7 @@ const TaskToolbar = () => {
   };
 
   return (
-    <>
+    <div className={styles.root}>
       <Row justify="space-between">
         <Col span={16}>
           <TaskFilters />
@@ -53,7 +53,7 @@ const TaskToolbar = () => {
       <Modal open={open} footer={null} centered onCancel={onClose}>
         <TaskForm onCancel={onClose} onSubmit={onSubmit} />
       </Modal>
-    </>
+    </div>
   );
 };
 

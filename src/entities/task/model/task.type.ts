@@ -20,6 +20,8 @@ export interface TaskFilters {
   tags?: string[];
   search?: string;
   sortByDate?: "desk" | "asc";
+  currentPage?: number;
+  limitPerPage?: number;
 }
 
 export const TASK_STATUSE_LABELS: Record<TaskStatus, string> = {
