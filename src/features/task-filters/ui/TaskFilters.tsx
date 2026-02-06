@@ -67,23 +67,22 @@ const TaskFilters = () => {
     option: OptionType | string | string[],
     key: keyof TaskFiltersType
   ) {
+    let values;
     if (key === "tags") {
-      const tagValues = Array.isArray(option)
+      values = Array.isArray(option)
         ? option
         : [typeof option === "string" ? option : option.value];
-
-      dispatch(setFilters({ tags: tagValues }));
     } else {
-      const value =
+      values =
         typeof option === "string"
           ? option
           : (option as OptionType | undefined)?.value;
-      dispatch(setFilters({ [key]: value }));
     }
+    dispatch(setFilters({ [key]: values, currentPage: 1 }));
   }
 
   const onSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    dispatch(setFilters({ search: event.target.value }));
+    dispatch(setFilters({ search: event.target.value, currentPage: 1 }));
   };
 
   const deboubncedSearchChange = useDebounceCallback(onSearchChange, 300);

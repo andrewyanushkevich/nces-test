@@ -59,7 +59,7 @@ const TaskCard: FC<TaskCardProps> = (props) => {
 
   const onTagClick = (tag: string) => (e: React.MouseEvent) => {
     e.stopPropagation();
-    dispatch(setFilters({ tags: tag }));
+    dispatch(setFilters({ tags: tag, currentPage: 1 }));
   };
 
   return (

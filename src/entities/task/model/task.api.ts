@@ -20,7 +20,7 @@ export const taskApi = baseApi.injectEndpoints({
             params.status = filters.status;
           }
           if (filters.tags && filters.tags.length > 0) {
-            params.tags = filters.tags;
+            params["tags_like"] = filters.tags;
           }
           if (filters.search) {
             params.q = filters.search;
