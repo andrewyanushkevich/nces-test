@@ -50,8 +50,8 @@ const TaskForm: FC<TaskFormProps> = (props) => {
 
   const { errors, isValid } = formState;
 
-  const onFinish = (values: TaskFormValues) => {
-    onSubmit(values);
+  const onFinish = async (values: TaskFormValues) => {
+    await onSubmit(values);
     reset();
   };
 
