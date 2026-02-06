@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <AntDHeader className={styles.root}>
       <Title level={4} style={{ margin: 0, color: "#2563eb" }}>
-        TaskFlow
+        Task Management App
       </Title>
     </AntDHeader>
   );

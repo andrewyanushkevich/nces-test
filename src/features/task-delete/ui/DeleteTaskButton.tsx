@@ -22,7 +22,6 @@ const DeleteTaskButton: FC<DeleteTaskButtonProps> = (props) => {
       okText: "Delete",
       okType: "danger",
       onOk: async () => {
-        console.log("here");
         try {
           await deleteTask(task.id).unwrap();
           message.success("Task is deleted");

@@ -15,6 +15,7 @@ import { Controller, useForm } from "react-hook-form";
 
 import styles from "./TaskForm.module.css";
 import dayjs from "dayjs";
+import { useGetTagsQuery } from "@/entities/tag/model/tag.api";
 
 interface TaskFormProps {
   task?: Task;
@@ -35,6 +36,8 @@ const priorityOptions = TASK_PRIORITY_KEYS.map((priority) => ({
 const TaskForm: FC<TaskFormProps> = (props) => {
   const { task, onSubmit, onCancel } = props;
 
+  const { data: tags } = useGetTagsQuery();
+
   const { control, formState, handleSubmit, reset } = useForm({
     defaultValues: {
       title: task?.title,
@@ -54,6 +57,12 @@ const TaskForm: FC<TaskFormProps> = (props) => {
     await onSubmit(values);
     reset();
   };
+
+  const tagOptions = tags?.map((tag) => ({
+    key: tag.id,
+    value: tag.name,
+    label: tag.name,
+  }));
 
   return (
     <Form layout="vertical" onFinish={handleSubmit(onFinish)}>
@@ -136,7 +145,7 @@ const TaskForm: FC<TaskFormProps> = (props) => {
           name="priority"
           control={control}
           render={({ field }) => (
-            <Radio.Group {...field} buttonStyle="solid" className="w-full flex">
+            <Radio.Group {...field} buttonStyle="solid">
               {priorityOptions.map((elem) => (
                 <Radio.Button value={elem.value}>{elem.label}</Radio.Button>
               ))}
@@ -154,10 +163,7 @@ const TaskForm: FC<TaskFormProps> = (props) => {
               mode="tags"
               size="large"
               placeholder="Select tags"
-              options={field?.value?.map((tag) => ({
-                key: tag,
-                value: tag,
-              }))}
+              options={tagOptions}
             />
           )}
         />
