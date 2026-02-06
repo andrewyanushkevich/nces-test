@@ -28,9 +28,17 @@ export const taskApi = baseApi.injectEndpoints({
 
         return search ? `tasks?${search}` : "tasks";
       },
+      providesTags: (result) =>
+        result
+          ? [
+              ...result.map(({ id }) => ({ type: "Tasks", id } as const)),
+              { type: "Tasks", id: "LIST" },
+            ]
+          : [{ type: "Tasks", id: "LIST" }],
     }),
     getTaskById: builder.query<Task, string>({
       query: (id) => `tasks/${id}`,
+      providesTags: (_result, _error, id) => [{ type: "Tasks", id }],
     }),
     createTask: builder.mutation<
       Task,
@@ -41,12 +49,17 @@ export const taskApi = baseApi.injectEndpoints({
         method: "POST",
         body: payload,
       }),
+      invalidatesTags: [
+        { type: "Tasks", id: "LIST" },
+        { type: "Tags", id: "LIST" },
+      ],
     }),
     deleteTask: builder.mutation<void, string>({
       query: (id) => ({
         url: `tasks/${id}`,
         method: "DELETE",
       }),
+      invalidatesTags: (_result, _error, id) => [{ type: "Tasks", id }],
     }),
   }),
 });
